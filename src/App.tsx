@@ -1,12 +1,14 @@
+import GlobalContainer from "./App.styled";
+import GlobalStyles from "./components/style/global";
+
+import Routes from "./routes";
+
 function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload. Learn React
-        </p>
-      </header>
-    </div>
+    <GlobalContainer>
+      <GlobalStyles />
+      <Routes />
+    </GlobalContainer>
   );
 }
 
