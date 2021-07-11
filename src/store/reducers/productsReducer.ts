@@ -7,13 +7,13 @@ import {
   SET_STATUS,
 } from "../types/productsTypes";
 
-export interface ProcutsInitialState {
+export interface ProductsInitialState {
   isLoading: boolean;
   status: string;
   products: ProductsProps;
 }
 
-export const initialState: ProcutsInitialState = {
+export const initialState: ProductsInitialState = {
   isLoading: false,
   status: "NOT_LOADED",
   products: {
@@ -26,7 +26,7 @@ export const initialState: ProcutsInitialState = {
 export default function productsReducer(
   state = initialState,
   action: ProductsActiontypes
-): ProcutsInitialState {
+): ProductsInitialState {
   switch (action.type) {
     case IS_LOADING:
       return {

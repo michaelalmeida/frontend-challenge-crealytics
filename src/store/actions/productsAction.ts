@@ -7,6 +7,8 @@ import {
   SET_PAGE,
 } from "../types/productsTypes";
 
+import service from "../../services/productsService";
+
 export const setProducts = (
   products: Array<ProductProps>
 ): ProductsActiontypes => ({
@@ -28,3 +30,21 @@ export const setStatus = (status: string): ProductsActiontypes => ({
   type: SET_STATUS,
   status,
 });
+
+export const getProducts = () => {
+  return (dispatch: (arg0: ProductsActiontypes) => void): void => {
+    dispatch(setIsLoading(true));
+    service
+      .get<Array<ProductProps>>("products")
+      .then((res) => {
+        dispatch(setProducts(res.data));
+        dispatch(setStatus("LOADED"));
+      })
+      .catch(() => {
+        dispatch(setStatus("ERROR"));
+      })
+      .finally(() => {
+        dispatch(setIsLoading(false));
+      });
+  };
+};
