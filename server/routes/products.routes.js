@@ -1,6 +1,3 @@
-var papa = require("papaparse");
-var fs = require("fs");
-
 var csvFilePath = "./files/products.csv";
 var csvtojson = require("csvtojson");
 
