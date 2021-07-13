@@ -33,6 +33,16 @@ const Home = (): JSX.Element => {
     (state: ProductsInitialState) => state.products.paginationLimite
   );
 
+  const setFilteredListCallBack = useCallback(() => {
+    setFilteredList(
+      products.items.filter((product) => product.title.includes(searchValue))
+    );
+  }, [products.items]);
+
+  useEffect(() => {
+    setFilteredListCallBack();
+  }, [setFilteredListCallBack]);
+
   useEffect(() => {
     setPageCount(Math.ceil(filteredList.length / paginationLimit));
     setPageListItems(filteredList.slice(0, paginationLimit));

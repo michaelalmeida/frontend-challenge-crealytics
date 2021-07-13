@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 import colors from "./colors";
-import { mainFont } from "./fonts";
+import { mainFont, secondaryFont } from "./fonts";
+import { MAX_WIDTH } from "./sizes";
 
-const { primary, white } = colors;
+const { black, primary, white } = colors;
 
 interface HeadingProps {
   white?: boolean;
@@ -11,7 +12,7 @@ interface HeadingProps {
 }
 
 export const H1 = styled.h1<HeadingProps>`
-  ${mainFont}
+  ${secondaryFont}
   font-size: 4.2rem;
   font-weight: 700;
   color: ${(props) => (props.white ? white : primary)};
@@ -27,19 +28,15 @@ export const H2 = styled.h2<HeadingProps>`
 `;
 
 export const H3 = styled.h3<HeadingProps>`
+  margin: 0;
   ${mainFont}
   font-size: 2.4rem;
   font-weight: normal;
-  color: ${(props) => (props.white ? white : primary)};
-`;
+  color: ${(props) => (props.white ? white : black)};
 
-export const H5 = styled.h5<HeadingProps>`
-    ${mainFont}
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-align: ${(props) => (props.right ? "right" : "left")};
-    color: (props) => (props.white ? white : primary)};
-    text-transform: uppercase;
+  @media screen and (max-width: ${MAX_WIDTH}) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const Paragraph = styled.p<HeadingProps>`
