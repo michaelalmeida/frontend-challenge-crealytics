@@ -1,18 +1,18 @@
 {
-  "home": "Home",
+    "home": "Home",
 
-  "products.search": "Start typing to see the product list",
+    "products.search": "Start typing to see the product list",
 
-  "products.pagination.previous": "Previous",
-  "products.pagination.next": "Next",
+    "products.pagination.previous": "Previous",
+    "products.pagination.next": "Next",
 
-  "product.id": "Product code",
-  "product.gender": "Gender",
-  "product.gender.no-available": "information no available",
-  "product.gender.type-female": "Female",
-  "product.gender.type-male": "Male",
-  "product.gender.type-unisex": "Unisex",
+    "product.id": "Product code",
+    "product.gender": "Gender",
+    "product.gender.no-available": "information no available",
+    "product.gender.type-female": "Female",
+    "product.gender.type-male": "Male",
+    "product.gender.type-unisex": "Unisex",
 
-  "no-image": "Image not available",
-  "loading-image": "Loading image"
+    "no-image": "Image not available",
+    "loading-image": "Loading image"
 }

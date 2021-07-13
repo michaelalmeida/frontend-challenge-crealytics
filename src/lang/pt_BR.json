@@ -1,8 +1,17 @@
 {
-  "home": "Ínicio",
+    "home": "Ínicio",
 
-  "products.search": "Comece a digitar para ver a lista de produtos",
+    "products.search": "Comece a digitar para ver a lista de produtos",
 
-  "products.pagination.previous": "Anterior",
-  "products.pagination.next": "Proximo"
+    "products.pagination.previous": "Anterior",
+    "products.pagination.next": "Proximo",
+    "product.id": "Codigo",
+    "product.gender": "Gênero",
+    "product.gender.no-available": "Não disponível",
+    "product.gender.type-female": "Feminino",
+    "product.gender.type-male": "Masculino",
+    "product.gender.type-unisex": "Unisex",
+
+    "no-image": "Imagem não disponível",
+    "loading-image": "Carregando imagem"
 }
