@@ -25,7 +25,7 @@ Clone the repository
 
 ```bash
 $ git clone https://github.com/michaelalmeida/frontend-challenge-crealytics.git
-$ cd fe-techtest-michaelalmeida
+$ cd frontend-challenge-crealytics
 ```
 
 When that's done, install the project dependencies, go to the root folder and run:
