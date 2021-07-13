@@ -25,12 +25,13 @@ const Image = ({ imageURL }: { imageURL: string }): JSX.Element => {
         }
       })
       .catch((error) => {
-        if (isSubscribed && error.response.status !== 400) {
-          setStatus("ERROR");
-        }
-        if (error.response.status === 400) {
-          setImageFetched(imageURL);
-          setStatus("LOADED");
+        if (isSubscribed) {
+          if (error.response.status !== 400) {
+            setStatus("ERROR");
+          } else {
+            setImageFetched(imageURL);
+            setStatus("LOADED");
+          }
         }
       });
 
